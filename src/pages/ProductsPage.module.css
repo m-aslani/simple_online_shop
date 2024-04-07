@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+}
+
+.products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
