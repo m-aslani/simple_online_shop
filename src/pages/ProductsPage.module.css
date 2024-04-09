@@ -1,13 +1,17 @@
-.container{
-    display: flex;
-    justify-content: space-between;
-      max-width: 1200px;
-      margin: auto;
+.main{
+  max-width: 1200px;
+  margin: auto
 }
 
-.products{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

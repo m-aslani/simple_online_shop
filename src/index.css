@@ -8,23 +8,14 @@ body {
   /* max-width: 1200px; */
   min-height: 100vh;
   padding: 0px 10px;
-  background-color: rgba(213, 245, 251, 1);
-  background-image: radial-gradient(
-      at 46% 33%,
-      rgba(178, 247, 239, 0.53) 0%,
-      transparent 50%
-    ),
-    radial-gradient(at 42% 83%, rgba(239, 247, 246, 1) 0%, transparent 35%),
-    radial-gradient(at 33% 31%, rgba(239, 247, 246, 1) 0%, transparent 50%),
-    radial-gradient(at 10% 64%, rgba(247, 214, 224, 0.64) 0%, transparent 54%),
-    radial-gradient(at 87% 72%, rgba(242, 181, 212, 0.29) 0%, transparent 39%),
-    radial-gradient(at 85% 12%, rgba(239, 247, 246, 1) 0%, transparent 50%);
+  background-image: linear-gradient(45deg, rgba(230,233,240,1) 0%, rgba(255,255,214,0.2) 76%, rgba(238,241,245,1) 100%);
+
 }
 
 * {
   padding: 0;
   margin: 0;
-  color: #112348;
+  /* color: #112348; */
   box-sizing: border-box;
 }
 
