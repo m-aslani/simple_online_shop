@@ -29,13 +29,38 @@ const createQueryObject = (currentQuery, newQuery) => {
   return { ...currentQuery, ...newQuery }; //if there is a two search for ex, it will update the last search in currentQury wirh search in newQuery
 };
 
-const getInitialQuery = (searchParams)=>{
+const getInitialQuery = (searchParams) => {
   const query = {};
   const category = searchParams.get("category");
   const search = searchParams.get("search");
-  if(category) query.category = category;
-  if(search) query.search = search;
+  if (category) query.category = category;
+  if (search) query.search = search;
   return query;
-}
+};
 
-export { shortenText, searchProducts, filterProducts , createQueryObject , getInitialQuery};
+const sumItems = (item) => {
+  const itemsCount = item.reduce((acc, curr) => acc + curr.quantity, 0);
+  const total = item
+    .reduce((acc, curr) => acc + curr.price * curr.quantity, 0)
+    .toFixed(2);
+  return { itemsCount, total };
+};
+
+const productQuantity = (state, id) => {
+  const index = state.selecteditems.findIndex((item) => item.id === id);
+  if (index === -1) {
+    return 0;
+  } else {
+    return state.selecteditems[index].quantity;
+  }
+};
+
+export {
+  shortenText,
+  searchProducts,
+  filterProducts,
+  createQueryObject,
+  getInitialQuery,
+  sumItems,
+  productQuantity,
+};

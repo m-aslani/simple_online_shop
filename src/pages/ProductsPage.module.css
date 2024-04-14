@@ -15,3 +15,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media (max-width: 800px) {
+  .container{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .products{
+    justify-content: center;
+  }
+}

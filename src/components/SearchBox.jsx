@@ -1,6 +1,8 @@
 import { TfiSearch } from 'react-icons/tfi'
 import { createQueryObject } from '../helpers/helper';
 
+import styles from "./SearchBox.module.css"
+
 function SearchBox({search , setSearch , setQuery}) {
 
     const searchHandler = () => {
@@ -9,7 +11,7 @@ function SearchBox({search , setSearch , setQuery}) {
 
 
   return (
-    <div>
+    <div className={styles.search}>
     <input
       type="text"
       placeholder="Search..."

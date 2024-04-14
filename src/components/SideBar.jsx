@@ -1,8 +1,12 @@
-import React from 'react'
-import { FaList } from 'react-icons/fa';
 import { createQueryObject } from '../helpers/helper';
+import { categories } from '../constants/categoriesList';
 
-function SideBar({setQuery}) {
+import { FaList } from 'react-icons/fa';
+
+import styles from "./SideBar.module.css"
+
+
+function SideBar({query,setQuery}) {
 
     const categoryHandler = (event) => {
         const { tagName } = event.target;
@@ -15,17 +19,15 @@ function SideBar({setQuery}) {
 
 
   return (
-    <div>
+    <div className={styles.sidebar}>
     <div>
       <FaList />
       <p>Categories</p>
     </div>
     <ul onClick={categoryHandler}>
-      <li>All</li>
-      <li>Electronics</li>
-      <li>Jewelery</li>
-      <li>Men's Clothing</li>
-      <li>Women's Clothing</li>
+      {categories.map((c)=>(
+        <li key={c.id} className={c.type.toLowerCase() === query.category ? styles.selected : null}>{c.type}</li>
+      ))}
     </ul>
   </div>
   )
